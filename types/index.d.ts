@@ -1,4 +1,4 @@
-onnectToDatabase
+
 
 // ====== USER PARAMS
 declare type CreateUserParams = {
