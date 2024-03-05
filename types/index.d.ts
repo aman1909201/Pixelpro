@@ -2,7 +2,7 @@
 
 // ====== USER PARAMS
 declare type CreateUserParams = {
-    clerkId: string;
+    clerkid: string;
     email: string;
     username: string;
     firstName: string;
@@ -123,7 +123,7 @@ declare type CreateUserParams = {
     userId: string;
     type: TransformationTypeKey;
     creditBalance: number;
-    data?: IImage | null;
+    data?: Image | null;
     config?: Transformations | null;
   };
   
