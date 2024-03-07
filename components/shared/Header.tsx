@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Header = ({title, subTitle}:{title: String, subTitle?:String}) => {
+const Header = ({title, subTitle}:{title: string, subTitle?:string}) => {
   return (
     <>
     <h2 className=' text-dark-400'>{title}</h2>
