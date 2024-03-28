@@ -8,7 +8,7 @@ const userschema= new Schema({
     firstname:{type:String},
     lastname:{type: String},
     planid:{type:String},
-    creditbalance:{type:String}
+    
 })
 
 const User= models?.User || model('User', userschema)

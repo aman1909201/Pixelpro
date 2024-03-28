@@ -116,7 +116,7 @@ export const download = (url: string, filename: string) => {
   }
 
   fetch(url)
-    .then((response) => response.blob())
+    .then((response) => response.blob()) //contains image
     .then((blob) => {
       const blobURL = URL.createObjectURL(blob);
       const a = document.createElement("a");

@@ -1,43 +1,43 @@
 import {  Document, Schema, model, models } from "mongoose";
 
-export interface Image extends Document{
-    title: String;
-    transformationtype: String;
-    publicid: String,
-    secureurl: URL,
-    width: number,
-    height: number,
-    color: String,
-    prompt: String,
-    aspectratio: String,
-    creditfee: number,
-    credit: String,
-    transformationration: String,
+export interface IImage extends Document{
+    title: string;
+    transformationType: string;
+    publicId: string;
+    secureURL: string; 
+    width?: number;
+    height?: number;
+    config?: object; 
+    transformationURL?: string; 
+    aspectRatio?: string;
+    color?: string;
+    prompt?: string;
     author: {
-        _id: String,
-        firstname: String,
-        lastname:String
+      _id: string;
+      firstName: string;
+      lastName: string;
     }
-    createdat?: Date
-    updatedat?: Date
+    createdat?: Date;
+    updatedat?: Date;
+  }
+  
 
 
-}
+
 
 const imageschema= new Schema({
     title:{type: String, required: true},
-    transformationtype:{type: String, required: true},
-    publicid:{type: String, required: true},
-    secureurl:{type: URL, required: true},
+    transformationType:{type: String, required: true},
+    publicId:{type: String, required: true},
+    secureURL:{type: String, required: true},
     width:{type: Number},
     height:{type: Number},
     config:{type: Object},
-    transformationurl:{type: URL},
-    aspectratio:{type: String},
+    transformationURL:{type: String},
+    aspectRatio:{type: String},
     color:{type: String},
     prompt:{type: String},
-    credit:{type: String},
-    creditfee:{type: Number},
+   
     transformationratio:{type: String},
     author:{type: Schema.Types.ObjectId, ref: 'User'},
     createdat:{type: Date, default: Date.now},

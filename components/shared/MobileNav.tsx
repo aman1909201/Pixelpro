@@ -31,7 +31,7 @@ const MobileNav = () => {
                         <SheetContent className="sm:w-64 sheet-content">
                             <>
                                 {/*here we put image logo with width=152 and height=23 */}
-                                {/* <Image src="/pixel.png" width={154} alt="logo" height={22}/> */}
+                                <Image src="/svgimages/logo.svg" width={154} alt="logo" height={22}/>
                                 <ul className="header-nav_elements" >
                                     {navLinks.map((link) => {
                                         const isactive = link.route === pathname

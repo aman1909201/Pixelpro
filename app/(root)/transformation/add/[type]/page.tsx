@@ -7,25 +7,27 @@ import { auth } from '@clerk/nextjs';
 import { redirect } from 'next/navigation';
 import React from 'react'
 
-const Addtransformationtype = async({params:{type}}:
+const Addtransformationtype = async ({ params: { type } }:
   SearchParamProps) => {
-    const {userId}=auth()
-    const transformation= transformationTypes[type];
-    if(!userId) redirect("/signup")
-    const user= await getUserById(userId)
+  const { userId } = auth()
+  const transformation = transformationTypes[type];
+  if (!userId) redirect("/signup")
+  const user = await getUserById(userId)
   return (
     <>
-    <Header 
-    title={transformation.title}
-    subTitle={transformation.subTitle}
-    />
+      <Header
+        title={transformation.title}
+        subTitle={transformation.subTitle}
+      />
 
-    <Transformationform
-    action="Add"
-    userId={user._id}
-    type={transformation.type as TransformationTypeKey}
-    creditBalance={user.creditBalance}
-    />
+      <section className='mt-5'>
+        <Transformationform
+          action="Add"
+          userId={user._id}
+          type={transformation.type as TransformationTypeKey}
+          
+        />
+      </section>
     </>
   )
 }
