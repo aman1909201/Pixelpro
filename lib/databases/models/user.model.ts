@@ -7,7 +7,7 @@ const userschema= new Schema({
     photo:{type: String, required: true},
     firstname:{type:String},
     lastname:{type: String},
-    planid:{type:String},
+    planid:{type: Number, default:1}
     
 })
 
