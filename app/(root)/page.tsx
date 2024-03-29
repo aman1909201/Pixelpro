@@ -15,16 +15,9 @@ const Home = async ({searchParams}: SearchParamProps) => {
   return (
     <>
     <section className='home'>
-      <h1 className='home-heading'>create images with pixelpro</h1>
+      <h1 className='home-heading'>Create Images with Pixelpro</h1>
       <ul className='flex-center w-full gap-2'>
-      {navLinks.slice(1,5).map((link)=>(
-        <Link key={link.route}
-        href={link.route}
-        className='flex-center flex-col gap-2'>
-         
-          <p className=' text-center text-white'>{link.label}</p>
-        </Link>
-      ))}
+    
       </ul>
     </section>
     <section className='sm:mt-12'>

@@ -53,12 +53,8 @@ const Transformimage = ({ image, type, title, isTransforming, setIsTransforming,
                     />
                     {isTransforming && (
                         <div className='transforming-loader'>
-                           <Image
-                           src="/svgimages/spinner.svg"
-                           width={50}
-                           height={50}
-                           alt='spinner' 
-                           />
+                         
+                          <p> Please wait...</p>
                         </div>
                     )}
                 </div>

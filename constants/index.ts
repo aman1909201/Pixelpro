@@ -9,11 +9,7 @@ export const navLinks = [
       route: "/transformation/add/restore",
       icon: "/svgimages/image.svg",
     },
-    {
-      label: "Generative Fill",
-      route: "/transformation/add/fill",
-      icon: "/svgimages/fill.svg",
-    },
+   
     {
       label: "Object Remove",
       route: "/transformation/add/remove",
